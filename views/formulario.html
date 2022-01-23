@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Formulario</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script type="text/javascript"> 
+
+    
+        function validar(){ 
+
+            
+            var form = document.form;
+
+            if(form.nombre.value==0){
+                alert("Rellene el campo Nombre");
+                form.nombre.value="";
+                form.nombre.focus();
+                return false;
+
+            }
+
+            if(form.correo.value==0){
+                alert("Rellene el campo Email");
+                form.correo.value="";
+                form.correo.focus();
+                return false;
+
+            }
+
+            if(form.telefono.value==0){
+                alert("Rellene el campo Telefono");
+                form.telefono.value="";
+                form.telefono.focus();
+                return false;
+
+            }
+
+            if(form.mensaje.value==0){
+                alert("Rellene el campo Mensaje");
+                form.mensaje.value="";
+                form.mensaje.focus();
+                return false;
+        }
+            alert("Envio de Informacion exitosa");
+            form.submit();
+
+    }
+    
+    </script>
+</head>
+<body>
+
+    <section class="formas">
+
+        <H4>FORMULARIO REGISTRO</H4>
+
+        <form action="enviar.php" method = "post">
+            Nombre:<input type = "text" name="nombre" placeholder="Ingresar el Nombre" class="controls"><br>
+            Email:<input type = "email" name="correo" placeholder="Ingresar el Email" class="controls"><br>
+            Telefono:<input type = "Telefono" name="telefono" placeholder="Ingresar El Telefono" class="controls"><br>
+            Mensaje: <textarea name="mensaje" rows="6" cols="30" placeholder="Escriba el Mensaje" class="controls"></textarea>
+            <br>
+            <button alert() type="submit"  class="formasenviar">Enviar Mensaje</button>
+        </form>
+
+    </section>
+           
+      
+        
+</body>
+
+</html>
